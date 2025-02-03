@@ -1,4 +1,11 @@
 /* Styling for the page container */
+
+body {
+  background: repeating-linear-gradient(45deg, #f39c12, #f39c12 10px, #fff 10px, #fff 20px);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .centered-container {
   display: flex;
   justify-content: center;
