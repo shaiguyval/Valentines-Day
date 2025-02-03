@@ -1,108 +1,66 @@
-.valentine-container {
+/* Styling for the page container */
+.centered-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100vh;
-}
-/* Custom class for Yes button styles */
-.yes-button {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-color: #a7efb8; /* bg-green-500 */
-  color: #fff; /* text-white */
-  font-weight: bold; /* font-bold */
-  padding: 8px 16px; /* py-2 px-4 */
-  border-radius: 8px; /* rounded */
-  margin-right: 8px; /* mr-4 */
+  background-color: #f8d7da;
 }
 
-.yes-button:hover {
-  background-color: #4f7457; /* hover:bg-green-700 */
+.valentine-container {
+  text-align: center;
 }
 
-/* Custom class for No button styles */
-.no-button {
-  background-color: #c90d0d; /* bg-red-500 */
-  color: #fff; /* text-white */
-  font-weight: bold; /* font-bold */
-  padding: 8px 16px; /* py-2 px-4 */
-  border-radius: 8px; /* rounded */
-}
-
-.no-button:hover {
-  background-color: #c82333; /* hover:bg-red-700 */
-}
-/* Custom class for text-4xl my-4 container */
 .text-container {
-  font-size: 2.25rem; /* Equivalent to text-4xl in tailwindcss */
-  margin-top: 1rem; /* Equivalent to my-4 in tailwindcss */
-  margin-bottom: 1rem; /* Equivalent to my-4 in tailwindcss */
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
-.centered-container {
-  display: flex;
-  font-size: large;
-  font-family: "Times New Roman", Times, serif;
-  flex-direction: column;
-  align-items: right;
-  justify-content: right;
-  height: 100vh;
-  margin: 0;
+/* Styling for Yes and No buttons */
+.yes-button,
+.no-button {
+  padding: 12px 25px;
+  font-size: 20px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.github-link {
+/* Hover effect for buttons */
+.yes-button:hover,
+.no-button:hover {
+  background-color: #d35400;
+  transform: scale(1.1);
+}
+
+/* Floating animation for the No button */
+.no-button.floating {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  color: #007bff; /* Set the color as needed */
-  text-decoration: none;
-}
-/*scroll bar starts*/
-*::-webkit-scrollbar {
-  height: 10px;
-  width: 10px;
-}
-*::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: #DCE7E1;
-  border: 6px double #FFFFFF;
+  animation: floatAround 3s ease-in-out infinite;
 }
 
-*::-webkit-scrollbar-track:hover {
-  background-color: #FCC5DF;
-}
-
-*::-webkit-scrollbar-track:active {
-  background-color: #FCC5DF;
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: #CF3E6E;
-  border: 2px double #FFFFFF;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #FC4985;
-}
-/* Animation for No button when clicked */
-.no-button.move-away {
-  animation: moveAway 1s ease-in-out forwards; /* Apply the moveAway animation */
-}
-
-/* Define the moveAway animation */
-@keyframes moveAway {
+@keyframes floatAround {
   0% {
-    transform: translateX(0); /* Initial position (button in place) */
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(300px) translateY(-200px);
   }
   50% {
-    transform: translateX(200px); /* Move the button right by 200px */
+    transform: translateX(-300px) translateY(200px);
+  }
+  75% {
+    transform: translateX(200px) translateY(100px);
   }
   100% {
-    transform: translateY(200px); /* Move the button down by 200px */
-    opacity: 0; /* Fade the button out */
+    transform: translateX(0) translateY(0);
   }
 }
+
 
 
 *::-webkit-scrollbar-thumb:active {
