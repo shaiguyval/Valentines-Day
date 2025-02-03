@@ -16,18 +16,18 @@ export default function Page() {
       "Are you sure?",
       "Really sure?",
       "Think again!",
-      "Last chance!",
+      "Baba Last chance!",
       "Surely not?",
-      "You might regret this!",
-      "Give it another thought!",
-      "Are you absolutely certain?",
+      "IM DYING!",
+      "PRINCESS STOPPPPPP",
+      "BUBBLE NEEDS YOU",
       "This could be a mistake!",
       "Have a heart!",
       "Don't be so cold!",
       "Change of heart?",
       "Wouldn't you reconsider?",
       "Is that your final answer?",
-      "You're breaking my heart ;(",
+      "JUST SAY YESSSSS!!!!!!!",
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -39,7 +39,7 @@ export default function Page() {
         {yesPressed ? (
           <>
             <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-            <div className="text-container">Ok yay!!!</div>
+            <div className="text-container">My Princess , 1 Year down forever to go!!!!!!</div>
           </>
         ) : (
           <>
@@ -48,7 +48,7 @@ export default function Page() {
               style={{ width: "400x", height: "240px" }}
               src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
             />
-            <h1 className="text-container">Will you be my Valentine?</h1>
+            <h1 className="text-container">Princess Will you be my Valentine?</h1>
             <div>
               <button
                 className={"yes-button"}
