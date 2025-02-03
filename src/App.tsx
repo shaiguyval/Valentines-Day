@@ -62,7 +62,7 @@ export default function Page() {
 
 <button
   onClick={handleNoClick}
-  className={`no-button ${isClicked ? 'move-away' : ''}`}
+  className={`no-button ${isClicked ? 'floating' : ''}`}
   disabled={isClicked}
 >
   {noCount === 0 ? "No" : getNoButtonText()}
