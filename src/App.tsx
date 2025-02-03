@@ -2,13 +2,15 @@ import { useState } from "react";
 import "./App.css";
 
 export default function Page() {
+  const [isClicked, setIsClicked] = useState(false); // Track if the button has been clicked
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
   const yesButtonSize = noCount * 20 + 16;
 
   const handleNoClick = () => {
-    setNoCount(noCount + 1);
-  };
+  setNoCount(noCount + 1);
+  setIsClicked(true); // Disable the button after click
+};
 
   const getNoButtonText = () => {
     const phrases = [
@@ -58,9 +60,13 @@ export default function Page() {
                 Yes
               </button>
 
-              <button onClick={handleNoClick} className="no-button">
-                {noCount === 0 ? "No" : getNoButtonText()}
-              </button>
+<button
+  onClick={handleNoClick}
+  className={`no-button ${isClicked ? 'move-away' : ''}`}
+  disabled={isClicked}
+>
+  {noCount === 0 ? "No" : getNoButtonText()}
+</button>
             </div>
           </>
         )}
